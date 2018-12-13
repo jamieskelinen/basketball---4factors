@@ -1,7 +1,7 @@
 % ====================== FOUR FACTORS ==========================================================================================================
 % 
 % How do basketball Teams win games? 
-% While searching for an answer to that question,†Dean Oliver†identified what he called the "Four Factors of Basketball Success":
+% While searching for an answer to that question,¬†Dean Oliver¬†identified what he called the "Four Factors of Basketball Success":
 %
 % Shooting (40%)
 % Turnovers (25%)
@@ -16,7 +16,7 @@ napu = size(P)
 n = [1:napu(1)]'
 
 % Shooting
-% The shooting factor is measured using†Effective Field Goal Percentage†(eFG%). 
+% The shooting factor is measured using¬†Effective Field Goal Percentage¬†(eFG%). 
 % The formula for both offense and defense is (FG + 0.5 * 3P) / FGA.
 P_eFGp = 100 * (P(:,1)+1.5*P(:,3))./P(:,10)
 Opp_eFGp = 100 * (P(:,11)+1.5*P(:,13))./P(:,20)
@@ -29,7 +29,7 @@ xlabel("Game")
 ylabel("eFG%")
 
 % Turnovers
-% The turnover factor is measured using†Turnover Percentage†(TOV%). 
+% The turnover factor is measured using¬†Turnover Percentage¬†(TOV%). 
 % The formula for both offense and defense is TOV / (FGA + 0.44 * FTA + TOV). 
 P_TOVp = 100 * P(:,9)./(P(:,9)+0.44*P(:,6)+P(:,10))
 Opp_TOVp = 100 * P(:,19)./(P(:,19)+0.44*P(:,16)+P(:,20))
@@ -42,7 +42,7 @@ xlabel("Game")
 ylabel("TOV%")
 
 % Rebounding
-% The rebounding factor is measured using†Offensive†and†Defensive†Rebound Percentage (ORB% and DRB%, respectively). 
+% The rebounding factor is measured using¬†Offensive¬†and¬†Defensive¬†Rebound Percentage (ORB% and DRB%, respectively). 
 % The formula for offense is ORB / (ORB + Opp DRB), while the formula for defense is DRB / (Opp ORB + DRB). 
 P_REBp= 100 * P(:,7)./(P(:,7)+P(:,8))
 Opp_REBp= 100 * P(:,17)./(P(:,17)+P(:,18))
@@ -71,7 +71,7 @@ ylabel("FT/FGA")
 % Basic Possession Formula=0.96*[(Field Goal Attempts)+(Turnovers)+0.44*(Free Throw Attempts)-(Offensive Rebounds)]
 % What are the .44 and .96 Multipliers?
 % .44 multiplier has to be taken into account because not all free throws take up a possession. 
-% Technical foul shots along with ìand 1ísî do not, while there are more than two free throws on one possession with a three-shot foul. 
+% Technical foul shots along with ‚Äúand 1‚Äôs‚Äù do not, while there are more than two free throws on one possession with a three-shot foul. 
 % Research has determined that about 44% of all free throws take up possessions. 
 % The .96 multiplier accounts for Team offensive rebounds in situations where a missed shot is tipped out of bounds by a defensive player, 
 % continuing the possession without an offensive rebound being credited.
@@ -114,7 +114,7 @@ P_poss_d = sqrt(var(poss))
 P_3ppp_m = mean(P_3ppp)
 P_3ppp_d = sqrt(var(P_3ppp))
 
-% Team Per 100 Poss Stats
+% Team Per 100 Posse Stats
 P_pp100p = sum(P(:,1)*2+P(:,3)*3+P(:,5))/sum(poss)*100
 
 % Opponent Per 100 Poss Stats
