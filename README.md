@@ -3,10 +3,10 @@
 # How do basketball Teams win games? 
 # While searching for an answer to that question, Dean Oliver identified what he called the "Four Factors of Basketball Success":
 #
-# Shooting (40#)
-# Turnovers (25#)
-# Rebounding (20#)
-# Free Throws (15#)
+# Shooting (40%)
+# Turnovers (25%)
+# Rebounding (20%)
+# Free Throws (15%)
 #
 # Shooting
 # The shooting factor is measured using Effective Field Goal Percentage (eFG#). 
